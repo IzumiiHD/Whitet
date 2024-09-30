@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GetKey | name</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js
+    " type="text/javascript"></script>
+    <script src="/js/themes.js"></script>
+    <link rel="stylesheet" href="/main.css">
+    <link rel="shortcut icon" href="/media/misc/favicon.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+</head>
+
+<body>
+    <script>
+        fetch('/config.json', {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: null
+        })
+            .then(response => response.json())
+            .then(response => {
+                let pagename = window.location.pathname.replace("/", "")
+                document.title = `${pagename.charAt(0).toUpperCase() + pagename.slice(1)} | ${response.name}`;
+                document.getElementsByClassName("styles__blooketText___1pMBG-camelCase")[0].innerText = response.name
+            })
+    </script>
+    <style>
+        .middletext {
+            -ms-overflow-style: none;
+            overflow: -moz-scrollbars-none;
+            scrollbar-width: none;
+        }
+
+        .middletext::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <div class="navigation-line"><a class="styles__blooketText___1pMBG-camelCase" href="/">name</a><text
+            style="text-decoration:none" class="styles__headerRight___nPb83-camelCase"><i class="fas fa-key"></i>
+            AccessKey</text></div>
+    <div class="middletext"
+        style="height:50%;overflow-y: scroll;position:absolute;left: 50%;top:50%;transform: translate(-50%,-50%);">
+        <div style="color:#fff;text-align: center;font-weight: bold;">
+            <h1>How to Obtain Access Key?</h1>
+            <text>1 - To obtain a access key it is <text style="font-style: italic;">required</text> that you join the
+                Discord server.</text><br>
+            <text>To Join Click Here: <a href="https://dsc.gg/triangulet" style="font-style:italic;color: #3a3a3a">Click
+                    Me!</a></text><br><br>
+            <text>2 - Next, once your in the server head to #bots. In #bots run the slash command
+                "/accesskey"</text><br>
+            <text>make sure to fill the "username" with your username, and the mobile slot if your on
+                mobile.</text><br><br>
+            <text>3 - head to the <a href="/register">register</a> page and fill in your information.</text><br>
+            <text>Make sure your username is the same one you entered into the slash command!</text><br>
+            <text>Enter the accesskey into the "accesskey" input.</text><br><br>
+            <h2>If You Have Any Problems Contact Staff In The Discord Server.</h2><br><br>
+            <h1>Why is there a Access Key?</h1>
+            <text id="idk">It serves 2 purposes for Triangulet:</text><br>
+            <text>1 - Semi alt protection, you should only be able to run the command once so you cant create multiple
+                accounts.</text><br><br>
+            <text>2 - Age barrier, if you are indeed following Discords TOS, you need to be over 13 to get a
+                accesskey</text>
+        </div>
+    </div>
+
+    <div class="styles__background___2J-JA-camelCase">
+        <div class="styles__blooksBackground___3oQ7Y-camelCase" style="background-image: url(&quot;/media/misc/background.png&quot;);  animation: animatedBackground 9s linear infinite;
+            -moz-animation: animatedBackground 9s linear infinite;
+            -webkit-animation: animatedBackground 9s linear infinite;
+            -ms-animation: animatedBackground 9s linear infinite;
+            -o-animation: animatedBackground 9s linear infinite;"></div>
+    </div>
+</body>
+
+</html>
